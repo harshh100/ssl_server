@@ -20,7 +20,7 @@ const sslServer = https.createServer({
     cert: fs.readFileSync(path.join(__dirname, 'cert', 'cert.pem'))
 }, app);
 
-// sslServer.listen(8001, () => console.log('Secure Server listening on port 8001'))
+sslServer.listen(8001, () => console.log('Secure Server listening on port 8001'))
 
 sslServer.listen(port, () => {
     console.log(`Example app listening on port https://localhost:${port}`)
